@@ -1,0 +1,47 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up and Log-In</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="button-container">
+            <button onclick="showSignUp()">Sign Up</button>
+            <button onclick="showLogIn()">Log In</button>
+        </div>
+        
+        <div id="form-container">
+            <!-- Sign-Up Form -->
+            <form id="signupForm" class="form">
+                <h2>Sign Up</h2>
+                <input type="email" id="signupEmail" placeholder="Email" required>
+                <input type="password" id="signupPassword" placeholder="Password" required>
+                <!-- Toggle Password Visibility -->
+                <label>
+                    <input type="checkbox" onclick="togglePasswordVisibility('signupPassword')"> Show Password
+                </label>
+                <button type="button" onclick="signUp()">Submit</button>
+                <p>Already have an account? <a href="#" onclick="showLogIn()">Log In</a></p>
+            </form>
+            
+            <!-- Log-In Form -->
+            <form id="loginForm" class="form hidden">
+                <h2>Log In</h2>
+                <input type="email" id="loginEmail" placeholder="Email" required>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <!-- Toggle Password Visibility -->
+                <label>
+                    <input type="checkbox" onclick="togglePasswordVisibility('loginPassword')"> Show Password
+                </label>
+                <button type="button" onclick="logIn()">Submit</button>
+                <p><a href="./Reset-Pass.html">Forget Password?</a></p>
+            </form>
+        </div>
+    </div>
+    
+    <script src="./index.js"></script>
+</body>
+</html>

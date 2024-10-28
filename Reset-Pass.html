@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Password</title>
+    <link rel="stylesheet" href="./resset-style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Reset Password Form -->
+        <form id="resetPasswordForm" class="form">
+            <h2>Reset Password</h2>
+            <input type="text" id="resetEmailOrPhone" placeholder="Email or Phone Number" required>
+            <input type="password" id="newPassword" placeholder="Set Password" required>
+            <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+            <!-- Toggle Password Visibility -->
+            <label>
+                <input type="checkbox" onclick="togglePasswordVisibility('newPassword'); togglePasswordVisibility('confirmPassword')"> Show Password
+            </label>
+            <button type="button" onclick="resetPassword()">Submit</button>
+            <p>Remembered? <a href="./index.html">Log In</a></p>
+        </form>
+    </div>
+    
+    <script src="./reset_pass.js"></script>
+</body>
+</html>
